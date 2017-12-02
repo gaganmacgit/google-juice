@@ -28,6 +28,7 @@ public class GoogleJuiceInjectorApplication {
 		Injector injector = Guice.createInjector(modulesList);
 		CheckoutService checkoutService = injector.getInstance(CheckoutService.class);
 		checkoutService.checkout(100);
+		checkoutService.checkout(400);
 		Communication communication = injector.getInstance(Communication.class);
 		communication.sendMessage(" Should be by SMS ");
 		EmptyClassHolder1 instance1 = injector.getInstance(EmptyClassHolder1.class);
@@ -36,6 +37,7 @@ public class GoogleJuiceInjectorApplication {
 		instance2.callMe();
 		House house1 = injector.getInstance(House.class);
 		House house2 = injector.getInstance(House.class);
+		House house4 = injector.getInstance(House.class);
 		// injector.getInstance(House.class);
 		house1.getWindow().constructorMe();
 	}
