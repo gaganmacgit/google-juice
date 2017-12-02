@@ -35,6 +35,7 @@ public class GoogleJuiceInjectorApplication {
 		instance1.callMe();
 		instance2.callMe();
 		House house1 = injector.getInstance(House.class);
+		House house2 = injector.getInstance(House.class);
 		// injector.getInstance(House.class);
 		house1.getWindow().constructorMe();
 	}
